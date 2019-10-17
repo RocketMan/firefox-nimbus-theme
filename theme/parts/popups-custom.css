@@ -1,0 +1,16 @@
+@import "popups-contents.css";
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* Adjust popovers position */
+panel[type=arrow] {
+	margin-top: 9px !important;
+	max-height: 80vh !important;
+}
+panel[type=arrow] {
+	margin-right: -40px !important;
+	margin-left: -40px !important;
+}
+panel[type=arrow][position] .panel-arrow {
+	margin-right: 30px !important;
+	margin-left: 30px !important;
+}
