@@ -1,0 +1,69 @@
+/* Tabs bar  */
+
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+/*
+:root {
+	--space-above-tabbar: 0 !important;
+}
+*/
+/* Tabs bar height */
+#tabbrowser-tabs,
+#tabbrowser-tabs arrowscrollbox {
+	height: initial !important;
+	min-height: initial !important;
+}
+tab > stack {
+	height: 38px !important;
+	min-height: 38px !important;
+}
+/* Extra margin for the first and last tabs */
+.tabbrowser-tab[first-tab]:not([pinned=true]) {
+	margin-left: 8px !important;
+}
+.tabbrowser-tab[last-tab]:not([pinned=true]) {
+	margin-right: 8px !important;
+}
+
+#TabsToolbar .toolbar-items {
+	margin-bottom: -1px !important;
+}
+
+/* Remove hover effects on tab bar buttons */
+#TabsToolbar {
+	--toolbarbutton-active-background: transparent !important;
+	--toolbarbutton-hover-background: transparent !important;
+	padding: 0 3px !important;
+}
+
+/* New hover effect */
+#TabsToolbar toolbarbutton {
+	fill-opacity: .6 !important;
+}
+#TabsToolbar toolbarbutton:not([disabled]):hover,
+#TabsToolbar toolbarbutton[open=true] {
+	fill-opacity: 1 !important;
+}
+
+/* Remove shadow next to tab scroll buttons */
+.arrowscrollbox-overflow-start-indicator,
+.arrowscrollbox-overflow-end-indicator {
+	display: none;
+}
+
+/* Create new container tab indicator */
+.tabbrowser-tab[class*="identity-color-"] .tab-content::before {
+	content: "";
+	display: block;
+	background-image: var(#userContext-icons:--identity-icon);
+	background: var( --identity-tab-color);
+	-moz-context-properties: fill;
+	fill: var(--identity-icon-color);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	min-width: 10px;
+	height: 10px;
+	margin-right: 5px;
+	margin-left: auto !important;
+	border-radius: 100%;
+}
