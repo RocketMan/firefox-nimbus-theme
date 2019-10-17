@@ -14,7 +14,7 @@
 /* Window buttons: at least 1 button */
 @media (-moz-gtk-csd-minimize-button), (-moz-gtk-csd-maximize-button), (-moz-gtk-csd-close-button) {
 	:root[tabsintitlebar]:not([inFullscreen]) #nav-bar {
-		padding-right: 50px !important;
+		padding-right: 10px !important;/*50*/
 	}
 }
 /* Window buttons: at least 2 buttons */
@@ -22,19 +22,19 @@
        (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-close-button),
        (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-close-button) {
 	:root[tabsintitlebar]:not([inFullscreen]) #nav-bar {
-		padding-right: 90px !important;
+		padding-right: 50px !important;/*90*/
 	}
 }
 /* Window buttons: 3 buttons */
 @media (-moz-gtk-csd-minimize-button) and (-moz-gtk-csd-maximize-button) and (-moz-gtk-csd-close-button) {
 	:root[tabsintitlebar]:not([inFullscreen]) #nav-bar {
-		padding-right: 130px !important;
+		padding-right: 90px !important;/*130*/
 	}
 }
 
 /* Fullscreen headerbar padding for 1 button */
 :root[tabsintitlebar][inFullscreen] #nav-bar {
-	padding-right: 50px !important;
+	padding-right: 10px !important;/*50*/
 }
 
 /* Window buttons box */
@@ -42,9 +42,11 @@
 :root[tabsintitlebar] #titlebar-buttonbox-container,
 :root[tabsintitlebar][inFullscreen] #window-controls {
 	-moz-appearance: none !important;
-	padding: 6px 3px;
-	position: absolute !important;	
-	right: 0;
+/*	padding: 6px 3px;*/
+	position: absolute !important;
+/*	border: solid 1px #000000;
+	padding: 1px;*/
+	right: 10px;
 	top: 0;
 	display: block !important;
 }
@@ -52,7 +54,7 @@
 	-moz-appearance: none !important;
 }
 
-/* Window buttons style */
+/* Window buttons style *//*
 :root[tabsintitlebar] #titlebar .titlebar-button,
 :root[tabsintitlebar][inFullscreen] #window-controls toolbarbutton {
 	-moz-appearance: none !important;
@@ -84,7 +86,7 @@
 	background: var(--gnome-button-active-background);
 	box-shadow: var(--gnome-button-active-box-shadow);
 	border-color: var(--gnome-button-active-border-color) !important;
-}
+}*/
 
 /* Remove close and minimize buttons from fullscreen buttons */
 :root[tabsintitlebar][inFullscreen] #window-controls #close-button,

@@ -10,10 +10,10 @@
 	--gnome-browser-before-load-background: #d6d6d6;
 
 	/* Toolbars */
-	--gnome-toolbar-background: #e0ddda;	
+	--gnome-toolbar-background: #e8e9ed;/*#e0ddda;	*/
 	--gnome-toolbar-color: rgb(46, 52, 54);
 	--gnome-toolbar-border-color: #b6b6b3;
-	--gnome-inactive-toolbar-background: #f6f5f4;	
+	--gnome-inactive-toolbar-background: #e8e9ed;/*#f6f5f4;	*/
 	--gnome-inactive-toolbar-border-color: #c0c0bd;
 
 	/* Sidebar */
@@ -30,12 +30,18 @@
 	--gnome-popover-separator-color: rgba(0, 0, 0, 0.1);
 
 	/* Header bar */
-	--gnome-headerbar-background: linear-gradient(to top, /*#dad6d2,*/ #cdc9c3, #ddd9d5 2px, #e0ddda);
+	/* BEGIN JM */
+	--gnome-headerbar-background: linear-gradient(to top, #e3e5e8, #aaafb9);
+	--gnome-inactive-headerbar-background: linear-gradient(to bottom, #abafb8, #c0c4cb);
+	/* END JM */
+	/*
+	--gnome-headerbar-background: linear-gradient(to top, #cdc9c3, #ddd9d5 2px, #e0ddda);
 	--gnome-headerbar-border-color: #bdb7b0;
 	--gnome-headerbar-box-shadow: 0 -1px rgb(217, 217, 217) inset, 0 1px #fff inset;
 	--gnome-inactive-headerbar-background: linear-gradient(#f6f5f4, #f6f5f4);
 	--gnome-inactive-headerbar-border-color: #c0c0bd;
 	--gnome-inactive-headerbar-box-shadow: 0 1px #fff inset;
+       */
 
 	/* Buttons */
 	--gnome-button-background: linear-gradient(to top, #edebe9 2px, #f6f5f4);
