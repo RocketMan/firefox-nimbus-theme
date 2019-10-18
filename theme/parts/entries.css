@@ -26,7 +26,7 @@
 	padding: 0 !important;
 }
 
-/* Entries focused */
+/* Entries focused *//*
 #urlbar.megabar[breakout][breakout-extend],
 #urlbar:not(.megabar)[focused],
 #searchbar:focus-within,
@@ -37,7 +37,7 @@
 	outline-offset: -2px;
 	-moz-outline-radius: 5px;
 }
-
+*/
 /* Inactive window entries */
 #urlbar.megabar #urlbar-input-container:-moz-window-inactive,
 #urlbar:not(.megabar):-moz-window-inactive,

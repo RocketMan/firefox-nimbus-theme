@@ -1,11 +1,31 @@
 /* Tabs bar  */
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
-/*
-:root {
-	--space-above-tabbar: 0 !important;
+
+/* Remove blue line above tabs */
+.tab-line {
+    display: none !important;
+    background-color: #7d9bb5 !important;
 }
-*/
+
+.tab-background {
+    border-radius: 5px 5px 0 0 !important;
+    border-image: none !important;
+    border: 1px solid #888888 !important;
+    background-color: #e8e9ed !important;
+}
+
+tab[selected="true"] .tab-background {
+    background-color: none;
+    background-image: linear-gradient(to bottom, #e8e9ed 5%, #a3b8cb) !important;
+    border: 1px solid #000000 !important;
+    border-bottom: 1px solid #a3b8cb !important;
+}
+
+.tabbrowser-tab::after, .tabbrowser-tab::before {
+    border-left: none !important;
+}
+
 /* Tabs bar height */
 #tabbrowser-tabs,
 #tabbrowser-tabs arrowscrollbox {
