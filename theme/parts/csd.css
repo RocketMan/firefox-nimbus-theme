@@ -6,11 +6,11 @@
 	-moz-appearance: -moz-window-titlebar !important;
 }
 
-/* Headerbar top border corners rounded */
+/* Headerbar top border corners rounded *//*
 :root[tabsintitlebar]:not([inFullscreen]):not([sizemode="maximized"]) #nav-bar {
 	border-radius: 7px 7px 0 0 !important;
 }
-
+*/
 /* Window buttons: at least 1 button */
 @media (-moz-gtk-csd-minimize-button), (-moz-gtk-csd-maximize-button), (-moz-gtk-csd-close-button) {
 	:root[tabsintitlebar]:not([inFullscreen]) #nav-bar {

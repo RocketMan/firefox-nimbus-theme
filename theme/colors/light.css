@@ -33,7 +33,8 @@
 	/* BEGIN JM */
 	--gnome-headerbar-background: linear-gradient(to top, #e3e5e8, #aaafb9);
 	--gnome-inactive-headerbar-background: linear-gradient(to bottom, #abafb8, #c0c4cb);
-	/* END JM */
+	--gnome-headerbar-box-shadow: 0 1px #cdd0d6 inset;
+	--gnome-inactive-headerbar-box-shadow: 0 1px #cdd0d6 inset;
 	/*
 	--gnome-headerbar-background: linear-gradient(to top, #cdc9c3, #ddd9d5 2px, #e0ddda);
 	--gnome-headerbar-border-color: #bdb7b0;
