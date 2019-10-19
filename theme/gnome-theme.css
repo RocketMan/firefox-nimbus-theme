@@ -13,11 +13,11 @@
 /*@import "parts/scrollbars.css";*/
 /*@import "parts/icons.css";*/
 @import "colors/light.css";
-@import "colors/dark.css";
+/*@import "colors/dark.css";*/
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 /* Set theme version text in customization panel */
 #customization-footer::before {
-	content: "Firefox GNOME theme v0.9";
+	content: "Firefox nimbus theme v1.0";
 	padding: 9px;
 }
