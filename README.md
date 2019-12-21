@@ -3,7 +3,7 @@
 This branch makes Firefox look more like epiphany/GNOME Web when
 running under the gtk3 nimbus theme that can be found elsewhere in
 this repo.  It is based on Rafael Mardojai's Firefox Adwaita theme.
-See the master branch or the upstream repo for information on the
+See the upstream branch or the upstream repo for information on the
 original code.
 
 It has been tested on Firefox 68.1.0esr under Solaris 11.3.
@@ -28,7 +28,7 @@ It has been tested on Firefox 68.1.0esr under Solaris 11.3.
 5. Clone this repo to a subdirectory:
 
 	```sh
-	git clone -b nimbus https://github.com/RocketMan/firefox-nimbus-theme.git
+	git clone https://github.com/RocketMan/firefox-nimbus-theme.git
 	```
 
 6. Create single-line user CSS files if non-existent or empty (at least one line is needed for `sed`):
@@ -67,5 +67,5 @@ It has been tested on Firefox 68.1.0esr under Solaris 11.3.
 
 	```sh
 	cd chrome/firefox-nimbus-theme
-	git pull --rebase origin nimbus
+	git pull --rebase origin master
 	```
