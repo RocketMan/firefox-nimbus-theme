@@ -43,10 +43,11 @@
 	border-bottom-color: var(--gnome-button-border-accent-color) !important;
 	border-radius: 5px !important;
 	padding: 0 3px !important;
-	height: 34px !important;
+	height: 34px !important; /* -> 31px for exactitude */
 	max-height: 34px !important;
 	min-height: 34px !important;
 	min-width: 34px !important;
+/*	width: 31px !important;*/
 	color: var(--gnome-toolbar-color) !important;
 	font: menu !important;
 }
