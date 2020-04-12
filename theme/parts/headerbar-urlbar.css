@@ -14,10 +14,6 @@
 	border-radius: 0 !important;
 	background: transparent !important;
 }
-#urlbar.megabar, #urlbar.megabar > #urlbar-input-container, #urlbar.megabar > .urlbarView {
-	position: none !important;
-	transition: none !important;
-}
 #urlbar-background {
 	display: none !important;
 }
@@ -35,14 +31,25 @@
 
 /* Megabar breakout styles  */
 #urlbar.megabar[breakout][breakout-extend][open] {
-	box-shadow: var(--gnome-popover-shadow) !important;
 	border-radius: 5px 5px 9px 9px !important;
 }
 #urlbar.megabar[breakout][breakout-extend][open] #urlbar-input-container {
+	border-radius: 5px 5px 0 0 !important;
+	border-color: var(--gnome-focused-urlbar-border-color) !important;
 	border-bottom-color: transparent !important;
+	border-width: 2px !important;
+}
+#urlbar.megabar[breakout][breakout-extend][open] #identity-box[pageproxystate="invalid"],
+#urlbar.megabar[breakout][breakout-extend][open] #tracking-protection-icon-container {
+	padding-inline-start: 5px !important;
+}
+#urlbar.megabar[breakout][breakout-extend][open] .urlbar-page-action:last-child {
+	margin-right: -1px !important;
 }
 #urlbar.megabar[breakout][breakout-extend][open] .urlbarView {
 	border-radius: 0 0 5px 5px !important;
+	border-color: var(--gnome-focused-urlbar-border-color) !important;
+	border-width: 2px !important;
 }
 
 /* Center the URL bar */
@@ -81,8 +88,7 @@ toolbarspring {
 	right: var(--item-padding-end) !important;
 	top: 40px !important;
 	z-index: 10 !important;
-	max-width: 100% !important;
-	
+	max-width: 100% !important;	
 	background: var(--gnome-popover-background) !important;
 	border: 1px solid !important;
 	border-color: var(--gnome-popover-border-color) !important;
@@ -103,6 +109,15 @@ toolbarspring {
 	border-color: var(--gnome-popover-separator-color) !important;
 }
 
+#urlbar:not(.megabar) .urlbarView-row {
+	padding: 5px !important;
+	border-radius: 5px !important;
+	margin-bottom: 5px !important;
+}
+#urlbar .urlbarView-row-inner, #urlbar .urlbarView-no-wrap  {
+	align-items: center !important;
+}
+
 #urlbar .search-panel-header > label {
 	margin-top: 0px !important;
 	margin-left: 6px !important;
@@ -118,10 +133,11 @@ toolbarspring {
 	background: var(--gnome-entry-background) !important;
 	width: 100% !important;
 	margin: 0 !important;
-	margin-top: -4px !important;
+	margin-top: -42px !important;
 	box-shadow: none !important;
 	border-top: 0 !important;
 	padding: 0px !important;
+	border-color: var(--gnome-entry-border-color) !important;
 }
 #urlbar.megabar .urlbarView-body-outer {
 	padding: 0 8px !important;
@@ -129,8 +145,8 @@ toolbarspring {
 #urlbar.megabar .urlbarView-body-inner {
 	border: 0 !important;
 }
-#urlbar.megabar .urlbarView-row {
-	padding: 6px !important;
+#urlbar.megabar .urlbarView-row-inner {
+	padding-block: 5px !important;
 	border-radius: 5px !important;
 }
 #urlbar.megabar .search-one-offs {
