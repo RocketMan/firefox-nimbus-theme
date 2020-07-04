@@ -1,0 +1,20 @@
+:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-close .toolbarbutton-icon,
+:root[tabsintitlebar] #titlebar #titlebar-close .toolbarbutton-icon {
+    width: 19px;
+    height: 18px;
+    margin-right: 3px;
+}
+
+:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-max .toolbarbutton-icon,
+:root[tabsintitlebar] #titlebar #titlebar-max .toolbarbutton-icon {
+}
+
+:root[tabsintitlebar] #titlebar .titlebar-buttonbox .titlebar-min .toolbarbutton-icon,
+:root[tabsintitlebar] #titlebar #titlebar-min .toolbarbutton-icon {
+    width: 19px;
+    height: 18px;
+    margin-left: 3px;
+}
+
+:root[tabsintitlebar][inFullscreen] #window-controls #restore-button .toolbarbutton-icon {
+}
