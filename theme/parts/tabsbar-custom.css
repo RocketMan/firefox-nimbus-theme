@@ -18,8 +18,17 @@
 tab[selected="true"] .tab-background {
     background-color: none;
     background-image: linear-gradient(to bottom, #e8e9ed 5%, #a3b8cb) !important;
-    border: 1px solid #000000 !important;
+    border: 1px solid #394e61 !important;
     border-bottom: 1px solid #a3b8cb !important;
+}
+
+tab:not([selected="true"]) .tab-background,
+tab:not([selected="true"]) .tab-content {
+    margin-top: 2px;
+}
+
+tab:not([selected="true"]):not(:hover) .tab-close-button {
+    list-style-image: none !important;
 }
 
 .tabbrowser-tab::after, .tabbrowser-tab::before {
@@ -86,4 +95,31 @@ tab > stack {
 	margin-right: 5px;
 	margin-left: auto !important;
 	border-radius: 100%;
+}
+
+.tab-close-button {
+	-moz-appearance: none !important;
+	border: 1px solid transparent;
+	box-sizing: content-box;
+	border-radius: 5px;
+	list-style-image: url("../icons/window-close-symbolic.svg") !important;
+	padding: 2px;
+}
+:root:not(:-moz-window-inactive) .tab-close-button:hover {	
+	background-image: var(--gnome-button-background);
+	box-shadow: var(--gnome-button-box-shadow);
+	border: 1px solid var(--gnome-button-border-color);
+	border-bottom-color: var(--gnome-button-border-accent-color);
+	opacity: 1;
+}
+:root:not(:-moz-window-inactive) .tab-close-button:active {
+	background-image: var(--gnome-button-active-background) !important;
+	box-shadow: var(--gnome-button-active-box-shadow) !important;
+	border-color: var(--gnome-button-active-border-color) !important;
+	border-bottom-color: var(--gnome-button-active-border-color) !important;
+	border-top-color: var(--gnome-button-active-border-accent-color) !important;
+}
+.tab-close-button:active:not(:hover) {
+	background-image: none !important;
+	box-shadow: none !important;
 }
