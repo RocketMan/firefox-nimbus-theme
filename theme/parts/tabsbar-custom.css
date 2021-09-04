@@ -12,23 +12,28 @@
     border-radius: 5px 5px 0 0 !important;
     border-image: none !important;
     border: 1px solid #888888 !important;
+    border-bottom: 3px solid #b6b6b3 !important;
     background-color: #e8e9ed !important;
+    margin: 0 -2px !important;
 }
 
-tab[selected="true"] .tab-background {
+tab[selected] .tab-background {
     background-color: none;
     background-image: linear-gradient(to bottom, #e8e9ed 5%, #a3b8cb) !important;
     border: 1px solid #394e61 !important;
     border-bottom: 1px solid #a3b8cb !important;
 }
 
-tab:not([selected="true"]) .tab-background,
-tab:not([selected="true"]) .tab-content {
-    margin-top: 2px;
+tab:not([selected]) .tab-background,
+tab:not([selected]) .tab-content {
+    margin-top: 2px !important;
 }
 
-tab:not([selected="true"]):not(:hover) .tab-close-button {
+tab:not([selected]):not(:hover) .tab-close-button {
     list-style-image: none !important;
+}
+tab[selected]:not(:hover) .tab-close-button {
+    min-width: 24px;
 }
 
 .tabbrowser-tab::after, .tabbrowser-tab::before {
@@ -46,15 +51,15 @@ tab > stack {
 	min-height: 38px !important;
 }
 /* Extra margin for the first and last tabs */
-.tabbrowser-tab[first-tab]:not([pinned=true]) {
+.tabbrowser-tab[first-tab]:not([pinned]) {
 	margin-left: 8px !important;
 }
-.tabbrowser-tab[last-tab]:not([pinned=true]) {
+.tabbrowser-tab[last-tab]:not([pinned]) {
 	margin-right: 8px !important;
 }
 
 #TabsToolbar .toolbar-items {
-	margin-bottom: -1px !important;
+       margin-bottom: -1px !important;
 }
 
 /* Remove hover effects on tab bar buttons */
@@ -69,7 +74,7 @@ tab > stack {
 	fill-opacity: .6 !important;
 }
 #TabsToolbar toolbarbutton:not([disabled]):hover,
-#TabsToolbar toolbarbutton[open=true] {
+#TabsToolbar toolbarbutton[open] {
 	fill-opacity: 1 !important;
 }
 
@@ -103,7 +108,7 @@ tab > stack {
 	box-sizing: content-box;
 	border-radius: 5px;
 	list-style-image: url("../icons/window-close-symbolic.svg") !important;
-	padding: 2px;
+	padding: 4px !important;
 }
 :root:not(:-moz-window-inactive) .tab-close-button:hover {	
 	background-image: var(--gnome-button-background);
