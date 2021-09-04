@@ -18,3 +18,12 @@
 
 :root[tabsintitlebar][inFullscreen] #window-controls #restore-button .toolbarbutton-icon {
 }
+
+#star-button[starred] {
+    list-style-image: url("../icons/starred-symbolic.svg") !important;
+    fill: orange !important;
+}
+#context-bookmarkpage,
+#star-button {
+    list-style-image: url("../icons/non-starred-symbolic.svg") !important;
+}
