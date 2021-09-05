@@ -1,0 +1,51 @@
+/* Dialogs */
+
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* Browser dialog prompts center */
+.content-prompt {
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Dialog */
+.dialogBox {
+	border-radius: 9px !important;
+	margin-top: 0 !important;
+}
+dialog[subdialog] {
+	background: var(--gnome-popover-background) !important;
+	border: 0 !important;
+	box-shadow: var(--gnome-popover-shadow) !important;
+	padding: 0 !important;
+}
+dialog {
+	padding: 0 !important;
+}
+
+/* Content */
+.dialog-content-box {
+	padding: 10px;
+}
+#titleContainer {
+	justify-content: center !important;
+}
+
+/* Buttons */
+.dialog-button-box {
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.dialog-button-box button:not(#hack) {
+	height: auto !important;
+	margin: 5px !important;
+}
+
+/* Hadler dialog */
+#os-default-handler image {
+	display: none !important;	
+}
+#os-default-handler .name {
+	font-weight: normal !important;
+}
