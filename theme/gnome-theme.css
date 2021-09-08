@@ -20,6 +20,6 @@
 
 /* Set theme version text in customization panel */
 #customization-footer::before {
-	content: "Firefox nimbus theme v1.1";
+	content: "Firefox nimbus theme v1.2";
 	padding: 9px;
 }
