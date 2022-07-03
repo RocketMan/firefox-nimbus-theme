@@ -13,3 +13,10 @@ panel[type=arrow][position] .panel-arrow {
 .panel-arrowcontent {
     box-shadow: var(--gnome-popover-shadow) !important;
 }*/
+
+menupopup > menuitem, menupopup > menu {
+    padding-block: 2px !important;
+    min-height: 26px !important;
+}
+
+*|*:root {--arrowpanel-menuitem-padding: 2px 8px !important;}
