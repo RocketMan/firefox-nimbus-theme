@@ -108,7 +108,7 @@ tab > stack {
 	box-sizing: content-box;
 	border-radius: 5px;
 	list-style-image: url("../icons/window-close-symbolic.svg") !important;
-	padding: 4px !important;
+	padding: 0 !important;
 }
 :root:not(:-moz-window-inactive) .tab-close-button:hover {	
 	background-image: var(--gnome-button-background);
@@ -127,4 +127,16 @@ tab > stack {
 .tab-close-button:active:not(:hover) {
 	background-image: none !important;
 	box-shadow: none !important;
+}
+
+/* Hide Tab bar with only one Tab - [110] */
+#tabbrowser-tabs .tabbrowser-tab:only-of-type,
+#tabbrowser-tabs .tabbrowser-tab:only-of-type + #tabbrowser-arrowscrollbox-periphery{
+    display: none !important;
+}
+#tabbrowser-tabs, #tabbrowser-arrowscrollbox {
+    min-height: 0 !important;
+}
+#alltabs-button {
+    display: none !important;
 }

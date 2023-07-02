@@ -3,6 +3,7 @@
 @import "parts/toolbox.css";
 @import "parts/headerbar.css";
 @import "parts/csd.css";
+@import "parts/urlbar.css";
 /*@import "parts/tabsbar.css";*/
 @import "parts/tabsbar-custom.css";
 @import "parts/findbar.css";
@@ -20,6 +21,6 @@
 
 /* Set theme version text in customization panel */
 #customization-footer::before {
-	content: "Firefox nimbus theme v1.2";
+	content: "Firefox nimbus theme v1.3";
 	padding: 9px;
 }

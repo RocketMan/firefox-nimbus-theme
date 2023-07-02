@@ -7,13 +7,13 @@
 	background: url("../icons/user-not-tracked.svg") no-repeat;
 	background-size: 64px 64px;
 	content: "";
-	display: block;	
+	display: block;
 	position: absolute;
 	width: 64px;
 	height: 46px;
 	top: 0;
 	opacity: 0.3;
-	transform: translate(15px, 0);	
+	transform: translate(15px, 0);
 }
 @media (prefers-color-scheme: dark) {
 	:root[privatebrowsingmode="temporary"] #nav-bar toolbarspring:first-of-type:before {
@@ -24,4 +24,7 @@
 /* Hide tabsbar default private browsing indicator */
 #TabsToolbar .private-browsing-indicator {
 	display: none !important;
+}
+#private-browsing-indicator-with-label, .titlebar-spacer[type="post-tabs"] {
+    display: none !important;
 }

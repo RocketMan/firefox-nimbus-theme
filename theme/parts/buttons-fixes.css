@@ -135,6 +135,11 @@
 	opacity: 1 !important;
 }
 
+/* Sidebar header button width */
+#sidebar-header > #sidebar-switcher-target {
+	min-width: calc(100% - 44px) !important;
+}
+
 /* Sidebar history view */
 #viewButton {
 	margin: 0 !important;
