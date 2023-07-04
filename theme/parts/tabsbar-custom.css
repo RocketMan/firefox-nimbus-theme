@@ -33,7 +33,7 @@ tab:not([selected]):not(:hover) .tab-close-button {
     list-style-image: none !important;
 }
 tab[selected]:not(:hover) .tab-close-button {
-    min-width: 24px;
+    min-width: 18px;
 }
 
 .tabbrowser-tab::after, .tabbrowser-tab::before {
@@ -109,6 +109,8 @@ tab > stack {
 	border-radius: 5px;
 	list-style-image: url("../icons/window-close-symbolic.svg") !important;
 	padding: 0 !important;
+	width: 18px !important;
+	height: 18px !important;
 }
 :root:not(:-moz-window-inactive) .tab-close-button:hover {	
 	background-image: var(--gnome-button-background);
@@ -127,6 +129,11 @@ tab > stack {
 .tab-close-button:active:not(:hover) {
 	background-image: none !important;
 	box-shadow: none !important;
+}
+
+/* Scrunch tabs together */
+#tabbrowser-tabs .tabbrowser-tab:not(:first-of-type) {
+    margin-left: -1px !important;
 }
 
 /* Hide Tab bar with only one Tab - [110] */
