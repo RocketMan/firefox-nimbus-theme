@@ -231,7 +231,8 @@ menulist[open] .menulist-label-box,
 }
 
 /* Combined buttons */
-#nav-bar .toolbaritem-combined-buttons toolbarbutton:not(:last-of-type):not(#hack),
+/* FX 115 plugin buttons match this selector, though not combined */
+/*#nav-bar .toolbaritem-combined-buttons toolbarbutton:not(:last-of-type):not(#hack),*/
 #nav-bar #back-button:not(#hack),
 .subviewbutton.panel-subview-footer:not(:only-of-type):not(:last-of-type),
 .panel-footer button:not(:only-of-type):not(:last-of-type),
@@ -245,7 +246,8 @@ menulist[open] .menulist-label-box,
 	margin-right: 0 !important;
 }
 
-#nav-bar .toolbaritem-combined-buttons toolbarbutton:not(:first-of-type):not(#hack),
+/* FX 115 removed selector for symmetry; see note above */
+/*#nav-bar .toolbaritem-combined-buttons toolbarbutton:not(:first-of-type):not(#hack),*/
 #nav-bar #forward-button:not(#hack),
 .subviewbutton.panel-subview-footer:not(:only-of-type):not(:first-of-type),
 .panel-footer button:not(:only-of-type):not(:first-of-type),
