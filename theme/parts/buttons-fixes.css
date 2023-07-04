@@ -180,3 +180,8 @@
 #identity-popup-security-expander .button-icon {
 	margin: 0 !important;
 }
+
+/* FX 115 hide extensions button */
+#unified-extensions-button {
+    display: none !important;
+}
