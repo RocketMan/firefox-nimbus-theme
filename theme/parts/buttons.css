@@ -248,9 +248,10 @@ menulist[open] .menulist-label-box,
 
 /* FX 115 removed selector for symmetry; see note above */
 /*#nav-bar .toolbaritem-combined-buttons toolbarbutton:not(:first-of-type):not(#hack),*/
+/* FX 128 full-page-translations-panel-cancel has hidden sibling to its left */
 #nav-bar #forward-button:not(#hack),
 .subviewbutton.panel-subview-footer:not(:only-of-type):not(:first-of-type),
-.panel-footer button:not(:only-of-type):not(:first-of-type),
+.panel-footer button:not(:only-of-type):not(:first-of-type):not(#full-page-translations-panel-cancel),
 #appMenu-popup .toolbaritem-combined-buttons toolbarbutton:not(:first-of-type):not(#appMenu-fullscreen-button),
 #context-navigation menuitem:not(:first-of-type),
 .findbar-container toolbarbutton.findbar-find-previous,

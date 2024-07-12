@@ -46,8 +46,8 @@
 	position: absolute !important;
 /*	border: solid 1px #000000;
 	padding: 1px;*/
-	right: 10px;
-	top: 12px;
+	right: 5px;
+	top: 14px;
 	display: block !important;
 }
 :root[tabsintitlebar] #titlebar .titlebar-buttonbox {

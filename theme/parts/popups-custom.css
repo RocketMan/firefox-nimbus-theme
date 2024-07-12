@@ -1,6 +1,14 @@
 @import "popups-contents.css";
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
+menupopup,
+.menupopup-arrowscrollbox {
+	border-radius: 4px !important;
+}
+:root {
+    --arrowpanel-border-radius: 4px !important;
+}
+
 /* Adjust popovers position */
 panel[type=arrow] {
 	margin-top: 9px !important;

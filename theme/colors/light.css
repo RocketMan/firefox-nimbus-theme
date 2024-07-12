@@ -20,9 +20,15 @@
 	--gnome-sidebar-background: #fbfafa;
 	--gnome-inactive-sidebar-background: #f9f9f8;
 
-	/* Popups */
+	/* Menu */
 	--gnome-menu-background: #ffffff;
-	--gnome-menu-border-color: #cdc7c2;
+	--gnome-menu-color: rgba(0, 0, 0, 0.8);
+	--gnome-menu-border-color: rgba(0, 0, 0, .04);
+	--gnome-menu-shadow: 0 1px 5px 1px rgba(0,0,0, .09), 0 2px 14px 3px rgba(0,0,0, .05);
+	--gnome-menu-button-hover-background: var(--gnome-button-background);
+	--gnome-menu-separator-color: color-mix(in srgb, currentColor 15%, transparent);
+
+	/* Popups */
 	--gnome-popover-background: #f6f5f4;
 	--gnome-popover-border-color: #cdc7c2;
 	--gnome-popover-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
