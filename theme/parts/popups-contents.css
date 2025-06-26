@@ -41,6 +41,14 @@
 #appMenu-fxa-status[fxastatus="signedin"] > #appMenu-fxa-avatar {
 	margin-inline-start: 5px !important;
 }
+#appMenu-zoom-controls .subviewbutton-iconic {
+    justify-content: center !important;
+    text-align: center !important;
+    > .toolbarbutton-icon {
+	background-color: transparent !important;
+	stroke: transparent !important;
+    }
+}
 
 /* User sync account remove avatar */
 #fxa-menu-avatar {

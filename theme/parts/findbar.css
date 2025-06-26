@@ -4,6 +4,8 @@
 
 findbar {
 	position: relative;
+	align-items: center;
+	padding: 0;
 }
 
 findbar label, findbar description {
@@ -13,6 +15,7 @@ findbar label, findbar description {
 .findbar-container {
 	align-items: center;
 	padding: 6px !important;
+	height: 38px !important;
 	display: flex;
 	justify-content: flex-start;
 	position: relative;

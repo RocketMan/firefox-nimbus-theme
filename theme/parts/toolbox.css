@@ -60,6 +60,13 @@ findbar:-moz-window-inactive description,
 	border-bottom-width: 0 !important;
 }
 
+/* Firefox 140 prevent transparency in tabs of inactive window */
+.browser-titlebar {
+    :root[customtitlebar] &, :root[customtitlebar] & #urlbar:popover-open {
+	opacity: 1 !important;
+    }
+}
+
 /* Reorder toolbars */
 #navigator-toolbox #nav-bar {
 	order: 0;

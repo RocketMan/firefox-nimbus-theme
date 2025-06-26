@@ -3,18 +3,93 @@
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 #urlbar {
-	--urlbar-height: 32.00px;
-	--urlbar-toolbar-height: 32.00px !important;
+	--urlbar-height: 34.00px;
+	--urlbar-toolbar-height: 34.00px !important;
 }
 
 #urlbar-container {
-	--urlbar-container-height: 32px !important;
+	--urlbar-container-height: 34px !important;
+
+	@media (max-width: 630px) {
+		width: auto !important;
+	}
+}
+
+/* URL bar */
+#urlbar {
+	box-shadow: none !important;
+}
+
+#urlbar[focused] > #urlbar-background {
+    outline: none !important;
+}
+
+#urlbar-background {
+	box-shadow: var(--gnome-entry-box-shadow) !important;
+	border: 0 !important;
+	border-radius: 5px !important;
+	background: transparent !important;
+}
+
+#urlbar .urlbar-input-container {
+	padding: 0 !important;
+}
+
+.urlbar-input::placeholder, .searchbar-textbox::placeholder {
+	opacity: 0.85 !important;
+}
+
+/* URL bar search mode */
+#nav-bar {
+    #urlbar[searchmode] {
+	.chromeclass-toolbar-additional#urlbar-searchmode-switcher {
+	    padding-right: 7px !important;
+	}
+    }
+
+    #urlbar {
+	#searchmode-switcher-chicklet {
+	    .close-button#searchmode-switcher-close {
+		min-width: 18px !important;
+		min-height: 18px !important;
+		height: 18px !important;
+		list-style-image: url("../icons/window-close-symbolic.svg") !important;
+
+		&:not(:hover) {
+		    border: none !important;
+		}
+	    }
+
+	    &:not(:hover) .close-button#searchmode-switcher-close {
+		opacity: 0 !important;
+	    }
+	}
+    }
+}
+
+#searchmode-switcher-chicklet {
+	background: var(--gnome-button-background) !important;
+	margin-top: -1px !important;
+	padding-left: 10px !important;
+}
+#searchmode-switcher-icon {
+	margin-inline-start: 9px !important;
+}
+#searchmode-switcher-dropmarker {
+	margin-inline-end: 9px !important;
+}
+
+#urlbar .urlbar-input-container .chromeclass-toolbar-additional#urlbar-searchmode-switcher {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    margin-left: -5px !important;
+    margin-top: -2px !important;
 }
 
 /* URL bar results */
 .urlbarView {
 	background: transparent !important;
-	color: var(--gnome-toolbar-color) !important;
+	color: var(--gnome-window-color) !important;
 	margin: 0 !important;
 	width: 100% !important;
     position: absolute !important;
@@ -51,12 +126,22 @@
 	border-radius: 5px !important;
 }
 
-.urlbarView-row[selected] .urlbarView-row-inner {
-	background: var(--gnome-accent-bg) !important;
-	color: white !important;
+.urlbarView-row[selected] {
+	background: var(--gnome-selected-color) !important;
+	color: var(--gnome-window-color) !important;
 }
-.urlbarView-row:not([selected]):hover .urlbarView-row-inner {
-	background: var(--gnome-menu-button-hover-background) !important;
+.urlbarView-row[selected]:hover {
+	background: var(--gnome-selected-hover-color) !important;
+}
+.urlbarView-row:not([selected]):hover {
+	background: var(--gnome-hover-color) !important;
+}
+.urlbarView-row:not([selected]):active {
+	background: var(--gnome-active-color) !important;
+}
+
+.urlbarView-url {
+	color: var(--gnome-accent) !important;
 }
 
 .urlbarView-action {
@@ -115,6 +200,12 @@
 	height: 100%  !important;
 }
 
+@media -moz-pref("browser.urlbar.richSuggestions.featureGate") {
+	#urlbar:not(.searchButton) > .urlbar-input-container > #identity-box[pageproxystate="invalid"] > .identity-box-button {
+		margin-inline-start: 2px;
+	}
+}
+
 /* Search mode indicator */
 #urlbar-search-mode-indicator,
 #urlbar-label-box,
@@ -129,7 +220,7 @@
 	padding-right: 0 !important;
 }
 #urlbar-search-mode-indicator-title {
-	color: var(--gnome-toolbar-color);
+	color: var(--gnome-window-color);
 	padding-inline: 4px !important;
 }
 #urlbar-search-mode-indicator-close {
@@ -169,4 +260,10 @@
 #identity-box[pageproxystate="valid"].extensionPage > .identity-box-button:hover:active,
 #identity-box[pageproxystate="valid"].extensionPage > .identity-box-button[open=true] {
   background-color: hsla(0,0%,70%,.3) !important;
+}
+
+@media -moz-pref("browser.urlbar.richSuggestions.featureGate") {
+	#identity-box[pageproxystate="invalid"] > .identity-box-button {
+		padding-inline:  var(--urlbar-icon-padding) !important;
+	}
 }

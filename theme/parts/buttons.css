@@ -53,9 +53,12 @@
 }
 
 /* Buttons with margins */
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton),
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(#urlbar-searchmode-switcher):not(#forward-button):not(#back-button),
 .notification-button {
 	margin: 0 3px !important;
+}
+#nav-bar toolbarbutton#back-button {
+	margin-left: 6px !important;
 }
 #TabsToolbar .toolbarbutton-1 {
 	margin: 2px 3px !important;
@@ -139,7 +142,7 @@ menulist:hover .menulist-label-box,
 }
 
 /* Active buttons */
-#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([disabled]):not(#hack):active,
+#nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(.titlebar-button):not([disabled]):not(#hack):active,
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not(.subviewbutton):not([disabled])[open],
 #nav-bar toolbarbutton:not(#urlbar-zoom-button):not(.subviewbutton):not([disabled])[checked],
 .subviewbutton.panel-subview-footer:active,

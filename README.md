@@ -6,7 +6,7 @@ the solaris-ports repo.  The theme is based on Rafael Mardojai's Firefox
 Adwaita theme.  See the upstream branch or the upstream repo for information
 on the original code.
 
-It has been tested on Firefox 68 esr and Firefox 78 esr under Solaris 11.3.
+It has been tested on Firefox 68 esr - Firefox 140 esr under Solaris 11.3.
 
 ## Screenshot
 ![screenshot](screenshot.png)
@@ -31,11 +31,11 @@ It has been tested on Firefox 68 esr and Firefox 78 esr under Solaris 11.3.
 	git clone https://github.com/RocketMan/firefox-nimbus-theme.git
 	```
 
-    Note: For Firefox 68.x esr ONLY, checkout the tag `firefox-nimbus-theme-v1.0`:
+    Note: For older versions of Firefox, checkout the appropriate tag; e.g., for Firefox 128 esr, `firefox-nimbus-theme-v1.4`:
 
 	```sh
 	cd firefox-nimbus-theme
-	git checkout firefox-nimbus-theme-v1.0
+	git checkout firefox-nimbus-theme-v1.4
 	cd ..
 	```
 
