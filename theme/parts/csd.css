@@ -12,14 +12,13 @@
 		border-radius: env(-moz-gtk-csd-titlebar-radius, 5px) env(-moz-gtk-csd-titlebar-radius, 5px) 0 0 !important;
 	}
 
-	/* Always show nav bar window buttons*/
-	#nav-bar > .titlebar-buttonbox-container {
-		display: flex !important;
-		margin-left: 6px !important;
-	}
-
 	/* Restore nimbus window buttons (min/max/close) */
 	#navigator-toolbox > #nav-bar > .titlebar-buttonbox-container {
+	    display: flex !important;
+	    margin-left: 6px !important;
+	    align-items: center;
+	    padding: 0 3px;
+
 	    toolbarbutton.titlebar-button {
 		width: 19px !important;
 		height: 18px !important;
@@ -122,75 +121,6 @@
 			}
 			.titlebar-restore {
 				display: inherit !important;
-			}
-		}
-	}
-
-	&:not([inFullscreen]) {
-		.titlebar-buttonbox-container {
-/*			padding: 0 8px;*/
-		}
-
-		/* Window buttons style */
-		.titlebar-button {
-			background: var(--gnome-button-background) !important;
-			border-radius: 100% !important;
-			height: 24px !important;
-			transition: background var(--gnome-animation-time);
-			width: 24px !important;
-
-			&:not([disabled]):hover {
-				background: var(--gnome-button-hover-background) !important;
-
-				& > .toolbarbutton-icon {
-					background: none !important;
-				}
-			}
-
-			&:not([disabled]):active {
-				background: var(--gnome-button-active-background) !important;
-			}
-
-			&::-moz-window-inactive {
-				filter: opacity(0.5);
-			}
-		}
-	}
-
-	.titlebar-buttonbox-container {
-		align-items: center;
-		padding: 0 3px;
-
-		.titlebar-buttonbox {
-			appearance: none !important;
-			/*gap: 13px;*/
-
-			.titlebar-button {
-				padding: 0 !important;
-				margin: 0 !important;
-
-				&:hover > .toolbarbutton-icon {
-					background: none !important;
-				}
-
-				@media not -moz-pref("gnomeTheme.noThemedIcons") {
-					& > .toolbarbutton-icon {
-						appearance: none !important;
-						height: 16px !important;
-						padding: 0 !important;
-						stroke: none !important;
-						width: 16px !important;
-						-moz-context-properties: fill, fill-opacity !important;
-					}
-				}
-
-				@media -moz-pref("widget.gtk.non-native-titlebar-buttons.enabled") {
-					&:-moz-lwtheme { /* Override config */
-						& > .toolbarbutton-icon {
-							appearance: auto !important
-						}
-					}
-				}
 			}
 		}
 	}
