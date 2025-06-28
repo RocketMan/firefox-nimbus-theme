@@ -2,6 +2,11 @@
 
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
+/* Remove tabbar's window controls */
+#TabsToolbar > .titlebar-buttonbox-container {
+    display: none;
+}
+
 /* Remove blue line above tabs */
 .tab-line {
     display: none !important;
