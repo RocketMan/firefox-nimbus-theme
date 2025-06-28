@@ -11,3 +11,5 @@ user_pref("browser.tabs.drawInTitlebar", true);
 // Set UI density to normal
 user_pref("browser.uidensity", 0);
 
+// Allow window dragging from headerbar buttons
+user_pref("gnomeTheme.dragWindowHeaderbarButtons", false);
