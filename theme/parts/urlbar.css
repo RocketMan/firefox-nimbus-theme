@@ -21,7 +21,7 @@
 }
 
 #urlbar[focused] > #urlbar-background {
-    outline: none !important;
+	outline-offset: 0 !important;
 }
 
 #urlbar-background {
