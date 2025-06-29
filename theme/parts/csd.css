@@ -30,6 +30,9 @@
 
 		> image {
 		    background-image: none !important;
+		    width: 19px !important;
+		    height: 18px !important;
+		    border-radius: 0 !important;
 		}
 
 		&.titlebar-min {
