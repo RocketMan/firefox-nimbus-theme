@@ -127,11 +127,11 @@
 }
 
 .urlbarView-row[selected] {
-	background: var(--gnome-selected-color) !important;
-	color: var(--gnome-window-color) !important;
+	background: var(--gnome-selected-background-color) !important;
+	color: var(--gnome-selected-color) !important;
 }
 .urlbarView-row[selected]:hover {
-	background: var(--gnome-selected-hover-color) !important;
+	background: var(--gnome-selected-background-hover-color) !important;
 }
 .urlbarView-row:not([selected]):hover {
 	background: var(--gnome-hover-color) !important;
